@@ -1,39 +1,62 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Admin
-  Date: 4/25/2022
-  Time: 9:49 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/common/taglib.jsp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Dashboard - SB Admin</title>
-    <link href="<c:url value="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" />" rel="stylesheet" />
-    <link href="<c:url value="/templates/admin/css/styles.css"/>" rel="stylesheet" />
-    <script src="<c:url value="https://use.fontawesome.com/releases/v6.1.0/js/all.js"/>" crossorigin="anonymous"></script>
+    <title><sitemesh:write property='title' /> Trang chủ </title>
+    <link rel="stylesheet" href="<c:url value='/template/admin/assets/css/bootstrap.min.css' />" />
+    <link rel="stylesheet" href="<c:url value='/template/admin/font-awesome/4.5.0/css/font-awesome.min.css' />" />
+    <link rel="stylesheet" href="<c:url value='/template/admin/assets/css/ace.min.css' />" class="ace-main-stylesheet" id="main-ace-style" />
+    <script src="<c:url value='/template/admin/assets/js/ace-extra.min.js' />"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type='text/javascript' src='<c:url value="/template/admin/js/jquery-2.2.3.min.js" />'></script>
+    <script src="<c:url value='/template/admin/assets/js/jquery.2.1.1.min.js' />"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<%--    <script src="<c:url value='/template/paging/jquery.twbsPagination.js' />"></script>--%>
+
+<%--    <script src="<c:url value='/ckeditor/ckeditor.js' />"></script>--%>
 </head>
-<body class="sb-nav-fixed">
-    <%@include file="/commons/admin/header.jsp"%>
-    <div id="layoutSidenav_content">
-        <sitemesh:write property='body'/>
-        <%@include file="/commons/admin/footer.jsp"%>
-    </div>
+<body class="no-skin">
+<!-- header -->
+<%@ include file="/common/admin/header.jsp" %>
+<!-- header -->
+
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+    <!-- header -->
+    <%@ include file="/common/admin/menu.jsp" %>
+    <!-- header -->
+
+    <sitemesh:write property='body' />
+
+    <!-- footer -->
+    <%@ include file="/common/admin/footer.jsp" %>
+    <!-- footer -->
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse display">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
 </div>
-<script src="<c:url value="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"/>" crossorigin="anonymous"></script>
-<script src="<c:url value="/templates/admin/js/scripts.js"/>"></script>
-<script src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"/>"></script>
-<script src="<c:url value="/templates/admin/assets/demo/chart-area-demo.js"/>"></script>
-<script src="<c:url value="/templates/admin/assets/demo/chart-bar-demo.js"/>"></script>
-<script src="<c:url value="https://cdn.jsdelivr.net/npm/simple-datatables@latest"/>"></script>
-<script src="<c:url value="/templates/admin/js/datatables-simple-demo.js"/>"></script>
+
+
+<script src="<c:url value='/template/admin/assets/js/bootstrap.min.js' />"></script>
+<script src="<c:url value='/template/admin/assets/js/jquery-ui.custom.min.js' />"></script>
+<script src="<c:url value='/template/admin/assets/js/jquery.ui.touch-punch.min.js' />"></script>
+<script src="<c:url value='/template/admin/assets/js/jquery.easypiechart.min.js' />"></script>
+<script src="<c:url value='/template/admin/assets/js/jquery.sparkline.min.js' />"></script>
+<script src="<c:url value='/template/admin/assets/js/jquery.flot.min.js' />"></script>
+<script src="<c:url value='/template/admin/assets/js/jquery.flot.pie.min.js' />"></script>
+<script src="<c:url value='/template/admin/assets/js/jquery.flot.resize.min.js' />"></script>
+<script src="<c:url value='/template/admin/assets/js/ace-elements.min.js' />"></script>
+<script src="<c:url value='/template/admin/assets/js/ace.min.js' />"></script>
+<script src="<c:url value='/template/admin/assets/js/bootstrap.min.js'/>"></script>
+
+<!-- page specific plugin scripts -->
+<script src="<c:url value='/template/admin/assets/js/jquery-ui.min.js'/>"></script>
 </body>
 </html>
-

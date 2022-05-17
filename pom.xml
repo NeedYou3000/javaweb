@@ -16,6 +16,9 @@
   <properties>
     <sitemesh.version>3.0.1</sitemesh.version>
     <springframework.version>5.3.15</springframework.version>
+    <hibernate.version>5.6.8.Final</hibernate.version>
+    <spring.data>2.6.4</spring.data>
+    <mysql.version>8.0.13</mysql.version>
     <javaxservlet.version>4.0.1</javaxservlet.version>
     <maven.compiler.source>15</maven.compiler.source>
     <maven.compiler.target>15</maven.compiler.target>
@@ -33,7 +36,6 @@
       <artifactId>spring-web</artifactId>
       <version>${springframework.version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-tx</artifactId>
@@ -54,7 +56,6 @@
       <artifactId>spring-context-support</artifactId>
       <version>${springframework.version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
@@ -90,7 +91,40 @@
       <artifactId>sitemesh</artifactId>
       <version>${sitemesh.version}</version>
     </dependency>
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql.version}</version>
+    </dependency>
+
+    <!-- Hibernate -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>${hibernate.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.1-api</artifactId>
+      <version>1.0.2.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>${hibernate.version}</version>
+    </dependency>
+
+    <!-- Spring data -->
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-jpa</artifactId>
+      <version>${spring.data}</version>
+    </dependency>
+
   </dependencies>
+
+
 
   <build>
     <finalName>javaweb</finalName>

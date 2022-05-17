@@ -7,6 +7,7 @@ import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.servlet.*;
 import java.util.EnumSet;
+import java.util.HashSet;
 
 public class WebIntializer implements WebApplicationInitializer {
     @Override
@@ -16,6 +17,11 @@ public class WebIntializer implements WebApplicationInitializer {
         addSitemeshFilterToServletContext(servletContext);
 
         registerDispatcherServlet(servletContext);
+
+        //remove cookie tracking mode in url
+        HashSet<SessionTrackingMode> set = new HashSet<SessionTrackingMode>();
+        set.add(SessionTrackingMode.COOKIE);
+        servletContext.setSessionTrackingModes(set);
     }
 
     private void createAppRootContext(ServletContext servletContext) {
