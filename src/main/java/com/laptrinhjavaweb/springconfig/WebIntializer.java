@@ -1,8 +1,10 @@
 package com.laptrinhjavaweb.springconfig;
 
+import com.laptrinhjavaweb.security.SpringSecurityConfig;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.servlet.*;
@@ -14,9 +16,13 @@ public class WebIntializer implements WebApplicationInitializer {
     public void onStartup(ServletContext servletContext) throws ServletException {
         createAppRootContext(servletContext);
 
+        servletContext.addFilter("securityFilter", new DelegatingFilterProxy("springSecurityFilterChain"))
+                .addMappingForUrlPatterns(null, false, "/*");
+
         addSitemeshFilterToServletContext(servletContext);
 
         registerDispatcherServlet(servletContext);
+
 
         //remove cookie tracking mode in url
         HashSet<SessionTrackingMode> set = new HashSet<SessionTrackingMode>();
@@ -28,6 +34,7 @@ public class WebIntializer implements WebApplicationInitializer {
         // Create the 'root' Spring application context
         AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
         rootContext.register(WebConfiguration.class);
+        rootContext.register(SpringSecurityConfig.class);
 
         // Manage the life-cycle of the root application context
         servletContext.addListener(new ContextLoaderListener(rootContext));

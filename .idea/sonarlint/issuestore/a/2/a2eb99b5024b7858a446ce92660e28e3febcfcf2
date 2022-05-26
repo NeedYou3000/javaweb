@@ -1,0 +1,24 @@
+
+?javascript:S1186"Unexpected empty function 'F'.(”é­úÿÿÿÿ
+7javascript:S1116"Unnecessary semicolon.(”é­úÿÿÿÿ
+]javascript:S2137"ADo not use "undefined" to declare a parameter - use another name.(ÿ¨±Ö
+ajavascript:S905G"FExpected an assignment or function call and instead saw an expression.(¶¥ŒÇ
+vjavascript:S3776Î"TRefactor this function to reduce its Cognitive Complexity from 30 to the 15 allowed.(½é×™üÿÿÿÿ
+Ijavascript:S1940¶"'Use the opposite operator (<=) instead.(…èÅùÿÿÿÿ
+=javascript:S2814Â"'width' is already defined.(·ó˜Åıÿÿÿÿ
+vjavascript:S3776½"TRefactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.(´ºÀ¸üÿÿÿÿ
+€javascript:S2392Ì"^Consider moving declaration of 'lastItem' as it is referenced outside current binding context.(˜Á¿Àøÿÿÿÿ
+Ijavascript:S1125¡"'Remove the unnecessary boolean literal.(ğàù¹ÿÿÿÿÿ
+vjavascript:S3776Å"TRefactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.(»Öúÿÿÿÿ
+Rjavascript:S1481Õ"5Remove the declaration of the unused 'base' variable.(Å€Ôá
+Ojavascript:S1854Õ"2Remove this useless assignment to variable "base".(Å€Ôá
+vjavascript:S3776Ğ"TRefactor this function to reduce its Cognitive Complexity from 58 to the 15 allowed.(ıî„Ğùÿÿÿÿ
+8javascript:S2814‚"'event' is already defined.(ãŸ Š
+8javascript:S2814«"'event' is already defined.(ãŸ Š
+ejavascript:S1121·"CExtract the assignment of "event.returnValue" from this expression.(Ë‹Éûÿÿÿÿ
+8javascript:S2814Ï"'event' is already defined.(ãŸ Š
+vjavascript:S3776"TRefactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.(õÎ¯åüÿÿÿÿ
+‡javascript:S2392ú"eConsider moving declaration of 'isBackgroundImg' as it is referenced outside current binding context.(¶ø«§úÿÿÿÿ
+}javascript:S2392™	"`Consider moving declaration of 'iterations' as it is referenced outside current binding context.(¨í¬¯
+^javascript:S1126¸	"<Replace this if-then-else flow by a single return statement.(¢æÍ¡ÿÿÿÿÿ
+Mjavascript:S1117è	"1'prevPos' is already declared in the upper scope.(¸×Ë^

@@ -1,0 +1,13 @@
+
+7javascript:S1116"Unnecessary semicolon.(ºÓß½øÿÿÿÿ
+ujavascript:S3776"TRefactor this function to reduce its Cognitive Complexity from 86 to the 15 allowed.(‚÷ï¡ûÿÿÿÿ
+Tjavascript:S1117"8'input_selector' is already declared in the upper scope.(Ïæâƒ
+ijavascript:S4138•"LExpected a `for-of` loop instead of a `for` loop with this simple iteration.(‚é±«
+Pjavascript:S1117Ü".'left' is already declared in the upper scope.(›¾†ûÿÿÿÿ
+wjavascript:S3776‚"URefactor this function to reduce its Cognitive Complexity from 142 to the 15 allowed.(íÒ…şÿÿÿÿ
+Mjavascript:S1117á"+'i' is already declared in the upper scope.(®ÌäÜúÿÿÿÿ
+Ljavascript:S1117—"/'label' is already declared in the upper scope.(ÂŸ–
+†javascript:S2703Á"dAdd the "let", "const" or "var" keyword to this declaration of "activateOption" to make it explicit.(ëÓ¼—şÿÿÿÿ
+javascript:S2392è"_Consider moving declaration of 'newOption' as it is referenced outside current binding context.(œË¸šúÿÿÿÿ
+Yjavascript:S1121²"7Extract the assignment of "value" from this expression.(¼öŞÙıÿÿÿÿ
+Yjavascript:S1121²"7Extract the assignment of "value" from this expression.(¼öŞÙıÿÿÿÿ

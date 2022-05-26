@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="com.laptrinhjavaweb.utils.SecurityUtils" %>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
@@ -9,23 +10,24 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Trang chủ
+              <a class="nav-link" href="<c:url value="/trang-chu"/>">Trang chủ
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <c:if test="${not empty USERMODEL}">
+            <security:authorize access="isAuthenticated()">
               <li class="nav-item">
-                <a class="nav-link" href='#'>Wellcome, ${USERMODEL.fullName}</a>
+                <a class="nav-link" href='#'>Wellcome, <%=SecurityUtils.getPrincipal().getFullName()%> </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href='<c:url value="/thoat?action=logout"/>'>Thoát</a>
+                <a class="nav-link" href='<c:url value="/thoat"/>'>Thoát</a>
               </li>
-            </c:if>
-            <c:if test="${empty USERMODEL}">
+            </security:authorize>
+            <security:authorize access="isAnonymous()">
               <li class="nav-item">
-                <a class="nav-link" href='<c:url value="/dang-nhap?action=login"/>'>Đăng nhập</a>
+                <a class="nav-link" href='<c:url value="/dang-nhap"/>'>Đăng nhập</a>
+                <a class="nav-link" href='<c:url value="/dang-ky"/>'>Đăng ký</a>
               </li>
-            </c:if>
+            </security:authorize>
           </ul>
         </div>
       </div>

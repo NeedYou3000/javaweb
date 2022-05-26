@@ -2,5 +2,7 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
     <persistence-unit name="persistence-data">
         <class>com.laptrinhjavaweb.entity.NewEntity</class>
+        <class>com.laptrinhjavaweb.entity.UserEntity</class>
+        <class>com.laptrinhjavaweb.entity.RoleEntity</class>
     </persistence-unit>
 </persistence>

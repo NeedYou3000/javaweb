@@ -1,0 +1,14 @@
+
+7javascript:S1116"Unnecessary semicolon.(ºÓß½øÿÿÿÿ
+zjavascript:S3973"YUse curly braces or indentation to denote the code conditionally executed by this "else".(Ï¸õ¾ùÿÿÿÿ
+€javascript:S2392A"_Consider moving declaration of 'maxHeight' as it is referenced outside current binding context.(½ìÉ½úÿÿÿÿ
+@javascript:S2814J"'maxHeight' is already defined.(‰¢õÕøÿÿÿÿ
+~javascript:S2392¹"\Consider moving declaration of 'toHide' as it is referenced outside current binding context.(òìÿ¤üÿÿÿÿ
+wjavascript:S2392º"ZConsider moving declaration of 'data' as it is referenced outside current binding context.(©Ù¿ë
+~javascript:S2392Â"\Consider moving declaration of 'toShow' as it is referenced outside current binding context.(óí«Öÿÿÿÿÿ
+>javascript:S2814Ş"'toShow' is already defined.(™ıøıÿÿÿÿ
+9javascript:S2814ß"'toHide' is already defined.(®ãºŞ
+7javascript:S2814á"'data' is already defined.(©Ù¿ë
+8javascript:S1116ï"Unnecessary semicolon.(ôŸìúÿÿÿÿ
+fjavascript:S3358ó"DExtract this nested ternary operation into an independent statement.(ÌïĞğÿÿÿÿÿ
+ajavascript:S3358ö"DExtract this nested ternary operation into an independent statement.(§˜ıË

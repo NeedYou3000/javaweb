@@ -56,7 +56,7 @@ public class AbstractDAO<T> implements GenericDAO<T>{
 
 			}
 		}
-		
+		return null;
 	}
 	
 	//Use for query "UPDATE" and "DELETE"

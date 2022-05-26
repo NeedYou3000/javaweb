@@ -1,0 +1,31 @@
+
+:javascript:S1186"Unexpected empty function 'F'.(ñ§î
+]javascript:S2137
+"ADo not use "undefined" to declare a parameter - use another name.(ÿ¨±Ö
+pjavascript:S3776*"TRefactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.(“ÅÇ©
+7javascript:S11167"Unnecessary semicolon.(ôŸìúÿÿÿÿ
+7javascript:S1116="Unnecessary semicolon.(ôŸìúÿÿÿÿ
+7javascript:S1116H"Unnecessary semicolon.(ôŸìúÿÿÿÿ
+7javascript:S1116P"Unnecessary semicolon.(ôŸìúÿÿÿÿ
+7javascript:S1116T"Unnecessary semicolon.(ôŸìúÿÿÿÿ
+7javascript:S1116_"Unnecessary semicolon.(ôŸìúÿÿÿÿ
+7javascript:S1116`"Unnecessary semicolon.(ôŸìúÿÿÿÿ
+pjavascript:S3776g"TRefactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ğ§Ÿ‡
+8javascript:S1116«"Unnecessary semicolon.(ôŸìúÿÿÿÿ
+8javascript:S1116±"Unnecessary semicolon.(ôŸìúÿÿÿÿ
+8javascript:S1116·"Unnecessary semicolon.(ôŸìúÿÿÿÿ
+8javascript:S1116½"Unnecessary semicolon.(ôŸìúÿÿÿÿ
+8javascript:S1116Ã"Unnecessary semicolon.(ôŸìúÿÿÿÿ
+8javascript:S1116ã"Unnecessary semicolon.(ôŸìúÿÿÿÿ
+Zjavascript:S1516ş"=Multiline support is limited to browsers supporting ES5 only.(ñÍºì
+Zjavascript:S1516ÿ"=Multiline support is limited to browsers supporting ES5 only.(Øå¥ê
+_javascript:S1516€"=Multiline support is limited to browsers supporting ES5 only.(Øƒ½Ïùÿÿÿÿ
+7javascript:S2814Ÿ"'that' is already defined.(Ä¾îĞ
+wjavascript:S2392Ÿ"ZConsider moving declaration of 'that' as it is referenced outside current binding context.(Ä¾îĞ
+8javascript:S1116µ"Unnecessary semicolon.(ôŸìúÿÿÿÿ
+Sjavascript:S1117×"1'options' is already declared in the upper scope.(òÅƒ†şÿÿÿÿ
+Bjavascript:S1186ï"%Unexpected empty method 'beforeShow'.(îÏ
+Bjavascript:S1186ğ"%Unexpected empty method 'afterShown'.(Øûúè
+Bjavascript:S1186ñ"%Unexpected empty method 'beforeHide'.(¸ÙÜ¾
+Hjavascript:S1186ò"&Unexpected empty method 'afterHidden'.(ÉÎŒĞûÿÿÿÿ
+Djavascript:S1186ó""Unexpected empty method 'onClick'.(Ì¦ÀÊûÿÿÿÿ

@@ -1,14 +1,12 @@
 package com.laptrinhjavaweb.entity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "new")
-public class NewEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Long id;
+public class NewEntity extends BaseEntity{
 
     @Column(name = "title")
     private String title;
@@ -21,6 +19,7 @@ public class NewEntity {
 
     @Column(name = "content", columnDefinition = "TEXT")
     private String content;
+
 
     public String getTitle() {
         return title;
@@ -54,9 +53,6 @@ public class NewEntity {
         this.content = content;
     }
 
-    public Long getId() {
-        return id;
-    }
 
 
 }
