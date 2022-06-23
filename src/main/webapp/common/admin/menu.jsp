@@ -35,7 +35,7 @@
     </div>
     <ul class="nav nav-list">
         <li >
-            <a href="/quan-tri/bai-viet/chinh-sua" class="dropdown-toggle">
+            <a href="<c:url value='/quan-tri/bai-viet/chinh-sua'/>" class="dropdown-toggle">
                 <i class="menu-icon fa fa-list"></i>
                 <span class="menu-text"></span>
                 Quản lý bài viết
@@ -51,7 +51,7 @@
 <%--                        <c:param name="sortName" value="title"/>--%>
 <%--                        <c:param name="sortBy" value="desc"/>--%>
 <%--                    </c:url>--%>
-                    <a href='/quan-tri/bai-viet/danh-sach'>
+                    <a href="<c:url value='/quan-tri/bai-viet/danh-sach?page=1&limit=2'/>">
                         <i class="menu-icon fa fa-caret-right"></i>
                         DS bài viết
                     </a>

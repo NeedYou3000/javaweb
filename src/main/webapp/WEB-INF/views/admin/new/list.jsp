@@ -1,19 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp" %>
-<c:url var="APIurl" value="/api-admin-new"/>
-<c:url var ="NewURL" value="/admin-new"/>
+<c:url var="newAPI" value="/api/new"/>
+<c:url var ="createNewURL" value="/quan-tri/bai-viet/chinh-sua"/>
+<c:url var="newURL" value="/quan-tri/bai-viet/danh-sach"></c:url>
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset="UTF-8">
 	<title>Danh sách bài viết</title>
-	<script src="<c:url value='/template/paging/jquery.twbsPagination.js'/>" type="text/javascript"></script>
+<%--	<script src="<c:url value='/template/paging/jquery.twbsPagination.js'/>" type="text/javascript"></script>--%>
 </head>
 
 <body>
 	<div class="main-content">
-		<form action="<c:url value='admin-new' />" id="formSubmit" method="get">
+		<form action="<c:url value='/quan-tri/bai-viet/danh-sach' />" id="formSubmit" method="get">
 			<div class="main-content-inner">
 				<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 					<ul class="breadcrumb">
@@ -26,9 +27,9 @@
 				<div class="page-content">
 					<div class="row">
 						<div class="col-xs-12">
-							<c:if test="${not empty messageResponse}">
+							<c:if test="${not empty message}" >
 								<div class="alert alert-${alert}">
-									${messageResponse}
+										${message}
 								</div>
 							</c:if>
 
@@ -39,12 +40,12 @@
 										<div class="dt-buttons btn-overlap btn-group">
 											<a flag="info"
 											   class="dt-button buttons-colvis btn btn-white btn-primary btn-bold" data-toggle="tooltip"
-											   title='Thêm bài viết' href='<c:url value="/admin-new?type=edit"/>'>
+											   title='Thêm bài viết' href='${createNewURL}'>
 															<span>
 																<i class="fa fa-plus-circle bigger-110 purple"></i>
 															</span>
 											</a>
-											<button id="btnDelete" type="button"
+											<button id="btnDelete" type="button" onclick="warningDeleteNew()"
 													class="dt-button buttons-html5 btn btn-white btn-primary btn-bold" data-toggle="tooltip" title='Xóa bài viết'>
 												<span>
 													<i class="fa fa-trash-o bigger-110 pink"></i>
@@ -73,8 +74,7 @@
 														<td>${item.title }</td>
 														<td>${item.shortDescription }</td>
 														<td>
-															<c:url var="editURL" value="/admin-new">
-																<c:param name="type" value="edit"/>
+															<c:url var="editURL" value="/quan-tri/bai-viet/chinh-sua">
 																<c:param name="id" value="${item.id}"/>
 															</c:url>
 															<a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
@@ -87,10 +87,10 @@
 										</table>
 										<ul class="pagination" id="pagination"></ul>
 										<input type="hidden" value="" id="page" name="page" />
-										<input type="hidden" value="" id="maxPageItem" name="maxPageItem" />
-										<input type="hidden" value="" id="sortName" name="sortName" />
-										<input type="hidden" value="" id="sortBy" name="sortBy" />
-										<input type="hidden" value="" id="type" name="type" />
+										<input type="hidden" value="" id="limit" name="limit" />
+<%--										<input type="hidden" value="" id="sortName" name="sortName" />--%>
+<%--										<input type="hidden" value="" id="sortBy" name="sortBy" />--%>
+<%--										<input type="hidden" value="" id="type" name="type" />--%>
 									</div>
 								</div>
 							</div>
@@ -100,7 +100,7 @@
 			</div>
 		</form>
 	</div><!-- /.main-content -->
-	<script type="text/javascript">
+	<script>
 		var totalPages = ${model.totalPage};
 		var currentPage = ${model.page};
 		var limit = 2;
@@ -111,37 +111,68 @@
 				startPage: currentPage,
 				onPageClick: function (event, page) {
 					if (currentPage != page) {
-						$('#maxPageItem').val(limit);
+						$('#limit').val(limit);
 						$('#page').val(page);
-						$('#sortName').val('title');
-						$('#sortBy').val('DESC');
-						$('#type').val('list');
+					// 	$('#sortName').val('title');
+					// 	$('#sortBy').val('DESC');
+					// 	$('#type').val('list');
 						$('#formSubmit').submit();
 					}
 				}
 			});
 		});
-
-		$('#btnDelete').click(function () {
-			var data = {};
-			var ids = $('tbody input[type=checkbox]:checked').map(function () {
-				return $(this).val();
-			}).get();
-			data['ids'] = ids;
-			deleteNew(data);
-		});
+		
+		function warningDeleteNew() {
+			swal({
+				title: "Are you sure?",
+				text: "Once deleted, you will not be able to recover this imaginary file!",
+				icon: "warning",
+				buttons: true,
+				showCancelButton: true,
+				dangerMode: true,
+			}).then((willDelete) => {
+				if (willDelete) {
+					var ids = $('tbody input[type=checkbox]:checked').map(function () {
+						return $(this).val();
+					}).get();
+					deleteNew(ids);
+				} else {
+					swal("Your imaginary file is safe!");
+				}
+			});
+			// swal({
+			// 	title: "Are you sure?",
+			// 	text: "You will not be able to recover this imaginary file!",
+			// 	type: "warning",
+			// 	showCancelButton: true,
+			// 	confirmButtonClass: "btn-danger",
+			// 	confirmButtonText: "Yes, delete it!",
+			// 	cancelButtonText: "No, cancel plx!",
+			// 	closeOnConfirm: false,
+			// 	closeOnCancel: false,
+			// }).then((isConfirm) => {
+			// 	if (isConfirm) {
+			// 		var data = {};
+			// 		var ids = $('tbody input[type=checkbox]:checked').map(function () {
+			// 			return $(this).val();
+			// 		}).get();
+			// 		data['ids'] = ids;
+			// 		deleteNew(data);
+			// 	}
+			// });
+		}
 
 		function deleteNew(data) {
 			$.ajax({
-				url: '${APIurl}',
+				url: '${newAPI}',
 				method: 'DELETE',
 				contentType: 'application/json',
 				data: JSON.stringify(data),
 				success: function(result) {
-					window.location.href = "${NewURL}?type=list&maxPageItem=2&page=1&sortName=title&sortBy=desc&message=delete_success";
+					window.location.href = "${newURL}?page=1&limit=2&message=delete_success";
 				},
 				error: function(error) {
-					window.location.href = "${NewURL}?type=list&maxPageItem=2&page=1&sortName=title&sortBy=desc&message=error_system";
+					window.location.href = "${newURL}?page=1&limit=2&message=error_system";
 				}
 			});
 		}

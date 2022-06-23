@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title><sitemesh:write property='title' /> Trang chủ </title>
+    <title><sitemesh:write property='title' /></title>
     <link rel="stylesheet" href="<c:url value='/template/admin/assets/css/bootstrap.min.css' />" />
     <link rel="stylesheet" href="<c:url value='/template/admin/font-awesome/4.5.0/css/font-awesome.min.css' />" />
     <link rel="stylesheet" href="<c:url value='/template/admin/assets/css/ace.min.css' />" class="ace-main-stylesheet" id="main-ace-style" />
@@ -15,9 +15,14 @@
     <script src="<c:url value='/template/admin/assets/js/jquery.2.1.1.min.js' />"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<%--    <script src="<c:url value='/template/paging/jquery.twbsPagination.js' />"></script>--%>
+    <script src="<c:url value='/template/paging/jquery.twbsPagination.js' />"></script>
 
-<%--    <script src="<c:url value='/ckeditor/ckeditor.js' />"></script>--%>
+    <%--    sweet alert  --%>
+    <script src="<c:url value='/template/sweetalert/sweetalert2.min.js' />"></script>
+    <link rel="stylesheet"  href="<c:url value='/template/sweetalert/sweetalert2.min.css' />">
+
+    <%--  ckeditor  --%>
+    <script src="<c:url value='/ckeditor/ckeditor.js' />"></script>
 </head>
 <body class="no-skin">
 <!-- header -->

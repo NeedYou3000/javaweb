@@ -56,6 +56,7 @@ public class JPAConfig {
         Properties properties = new Properties();
 //        properties.setProperty("hibernate.hbm2ddl.auto", "create-drop"); // Giup lan dau tien tao ra cac database theo Java class
 //        properties.setProperty("hibernate.hbm2ddl.auto", "create");
+//        properties.setProperty("hibernate.hbm2ddl.auto", "update");
         // Khi on dinh can dong lai (mat data neu khong dong)
         properties.setProperty("hibernate.hbm2ddl.auto", "none");
         properties.setProperty("hibernate.enable_lazy_load_no_trans", "true");
